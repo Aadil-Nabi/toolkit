@@ -2,10 +2,12 @@ package toolkit
 
 import "crypto/rand"
 
+// Tools type helps to define and initiate the RandomString
 type Tools struct{}
 
 const RandomStringSource = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUV123456789_#"
 
+// RandomString returns a random string generated from the runes
 func (t *Tools) RandomString(n int) string {
 	s, r := make([]rune, n), []rune(RandomStringSource)
 
